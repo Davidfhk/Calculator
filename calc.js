@@ -9,11 +9,11 @@ function number (num){
 }
 function sumar (){
 	if (resta == true) {
-		cifra();
+		cifraFunc();
 		acumulado = acumulado - parseInt(cifra);
 		resta = false;
 	}else{
-		cifra();
+		cifraFunc();
 		acumulado = acumulado + parseInt(cifra);
 	}
 	
@@ -23,12 +23,12 @@ function sumar (){
 }
 function igual (){
 	if(suma == true){
-		cifra();
+		cifraFunc();
 		resultado = acumulado + parseInt(cifra);
 		document.getElementById('display').value = resultado;
 	}
 	if(resta == true){
-		cifra();
+		cifraFunc();
 		resultado = acumulado - parseInt(cifra);
 		document.getElementById('display').value = resultado;
 	}
@@ -39,11 +39,11 @@ function igual (){
 }
 function restar (){
 	if (acumulado == 0 || suma == true){
-		cifra();
+		cifraFunc();
 		acumulado = acumulado + parseInt(cifra);
 		suma = false;
 	}else{
-		cifra();
+		cifraFunc();
 		acumulado = acumulado - parseInt(cifra);
 	}
 		cifra = "";
@@ -51,7 +51,7 @@ function restar (){
 		resta = true;
 }
 
-function cifra () {
+function cifraFunc () {
 	if (cifra == "") {
 		cifra = 0;
 	}
