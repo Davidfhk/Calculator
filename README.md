@@ -28,6 +28,8 @@ Ejemplo:
 
 
 -------------Falta-----------------
+
+
 Corregir un error: al restar menos 0, no resta en negativo, porque entra en el if de acumulado==0 
 
 
