@@ -3,7 +3,7 @@
 Pequeño proyecto en desarrollo, para practicar un poco de js.
 
 
-Por ahora la calculadora solo suma, resta y igual
+Por ahora la calculadora solo suma, resta.
 
 
 Ejemplo:
@@ -28,7 +28,7 @@ Ejemplo:
 
 
 -------------Falta-----------------
-
+Corregir un error: al restar menos 0, no resta en negativo, porque entra en el if de acumulado==0 
 
 
 Añadir función de dividir (/)
