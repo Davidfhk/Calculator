@@ -39,9 +39,15 @@ function igual (){
 }
 function restar (){
 	if (acumulado == 0 || suma == true){
-		cifraFunc();
-		acumulado = acumulado + parseInt(cifra);
-		suma = false;
+		if (resta == true) {
+			cifraFunc();
+			acumulado = acumulado - parseInt(cifra);
+		}else{
+			cifraFunc();
+			acumulado = acumulado + parseInt(cifra);
+			suma = false;
+		}
+		
 	}else{
 		cifraFunc();
 		acumulado = acumulado - parseInt(cifra);
