@@ -16,7 +16,9 @@ function sumar (){
 		resta = false;
 	}else{
 		if (multiplica == true) {
-			cifraFunc();
+			if (cifra == "") {
+				cifra = 1;
+			}
 			acumulado = acumulado * parseInt(cifra);
 		}else{
 			cifraFunc();
@@ -44,7 +46,9 @@ function igual (){
 		document.getElementById('display').value = resultado;
 	}
 	if (multiplica == true) {
-		cifraFunc();
+		if (cifra == "") {
+			cifra = 1;
+		}
 		resultado = acumulado * parseInt(cifra);
 		document.getElementById('display').value = resultado;
 	}
@@ -67,7 +71,9 @@ function restar (){
 		
 	}else{
 		if (multiplica == true) {
-			cifraFunc();
+			if (cifra == "") {
+				cifra = 1;
+			}
 			acumulado = acumulado * parseInt(cifra);
 		}else{
 			cifraFunc();
@@ -91,7 +97,9 @@ function multiplicar (){
 			cifraFunc();
 			acumulado = acumulado - parseInt(cifra);
 		}else{
-			cifraFunc();
+			if (cifra == "") {
+				cifra = 1;
+			}
 			acumulado = acumulado * parseInt(cifra);
 		}
 		
