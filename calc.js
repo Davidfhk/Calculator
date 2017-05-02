@@ -51,7 +51,7 @@ function sumar (){
 }
 
 function igual (){
-	if(suma == true){
+	if(acumulado == 0 || suma == true){
 		cifraFunc();
 		resultado = acumulado + parseInt(cifra);
 		document.getElementById('display').value = resultado;
