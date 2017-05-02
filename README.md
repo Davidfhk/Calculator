@@ -3,33 +3,14 @@
 Pequeño proyecto en desarrollo, para practicar un poco de js.
 
 
-Por ahora la calculadora solo suma, resta.
+Por ahora la calculadora puede:
 
+sumar, restar, dividir y multiplicar.
 
-Ejemplo:
-
-
-1+1+
-
-
-1-1-
-
-
-1+1+-
-
-
-1-1-+
-
-
-1+1=-
-
-
-1-1=+
 
 
 -------------Falta-----------------
 
-Añadir función de dividir (/)
+Añadir el punto, para poder insertar decimales.
 
 
-Añadir función de multiplicar (*)
