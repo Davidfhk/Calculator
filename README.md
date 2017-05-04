@@ -1,16 +1,13 @@
 # Calculator
 
-Pequeño proyecto en desarrollo, para practicar un poco de js.
+Pequeño proyecto, para practicar un poco de js.
 
 
 Por ahora la calculadora puede:
 
-sumar, restar, dividir y multiplicar.
+sumar, restar, dividir, multiplicar. Y añadir decimales.
 
 
 
--------------Falta-----------------
-
-Añadir el punto, para poder insertar decimales.
 
 
