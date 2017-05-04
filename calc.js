@@ -10,7 +10,7 @@ var resta = false;
 var multiplica = false;
 var divide = false;
 
-// función para el display empiece con un 0
+// función para que el display empiece con un 0
 function init (){
 	document.getElementById('display').value = acumulado;
 }
@@ -21,23 +21,19 @@ function number (num){
 
 function sumar (){
 	if (resta == true) {
-		cifraFunc();
-		acumulado = acumulado - parseInt(cifra);
+		cifraFuncA();
+		acumulado = acumulado - parseFloat(cifra);
 		resta = false;
 	}else{
 		if (multiplica == true) {
-			if (cifra == "") {
-				cifra = 1;
-			}
-			acumulado = acumulado * parseInt(cifra);
+			cifraFuncB();
+			acumulado = acumulado * parseFloat(cifra);
 		}else if(divide == true){
-			if (cifra == "") {
-				cifra = 1;
-			}
-			acumulado = acumulado / parseInt(cifra);
+			cifraFuncB();
+			acumulado = acumulado / parseFloat(cifra);
 		}else{
-			cifraFunc();
-			acumulado = acumulado + parseInt(cifra);
+			cifraFuncA();
+			acumulado = acumulado + parseFloat(cifra);
 		}
 		
 	}
@@ -52,27 +48,23 @@ function sumar (){
 
 function igual (){
 	if(acumulado == 0 || suma == true){
-		cifraFunc();
-		resultado = acumulado + parseInt(cifra);
+		cifraFuncA();
+		resultado = acumulado + parseFloat(cifra);
 		document.getElementById('display').value = resultado;
 	}
 	if(resta == true){
-		cifraFunc();
-		resultado = acumulado - parseInt(cifra);
+		cifraFuncA();
+		resultado = acumulado - parseFloat(cifra);
 		document.getElementById('display').value = resultado;
 	}
 	if (multiplica == true) {
-		if (cifra == "") {
-			cifra = 1;
-		}
-		resultado = acumulado * parseInt(cifra);
+		cifraFuncB();
+		resultado = acumulado * parseFloat(cifra);
 		document.getElementById('display').value = resultado;
 	}
 	if (divide == true) {
-		if (cifra == "") {
-				cifra = 1;
-		}
-		resultado = acumulado / parseInt(cifra);
+		cifraFuncB();
+		resultado = acumulado / parseFloat(cifra);
 		document.getElementById('display').value = resultado;
 	}
 	acumulado = resultado;
@@ -86,27 +78,23 @@ function igual (){
 function restar (){
 	if (acumulado == 0 || suma == true){
 		if (resta == true) {
-			cifraFunc();
-			acumulado = acumulado - parseInt(cifra);
+			cifraFuncA();
+			acumulado = acumulado - parseFloat(cifra);
 		}else{
-			cifraFunc();
-			acumulado = acumulado + parseInt(cifra);
+			cifraFuncA();
+			acumulado = acumulado + parseFloat(cifra);
 		}
 		
 	}else{
 		if (multiplica == true) {
-			if (cifra == "") {
-				cifra = 1;
-			}
-			acumulado = acumulado * parseInt(cifra);
+			cifraFuncB();
+			acumulado = acumulado * parseFloat(cifra);
 		}else if (divide == true){
-			if (cifra == "") {
-				cifra = 1;
-			}
-			acumulado = acumulado / parseInt(cifra);
+			cifraFuncB();
+			acumulado = acumulado / parseFloat(cifra);
 		}else{
-			cifraFunc();
-			acumulado = acumulado - parseInt(cifra);
+			cifraFuncA();
+			acumulado = acumulado - parseFloat(cifra);
 		}
 		
 	}
@@ -119,22 +107,18 @@ function restar (){
 
 function multiplicar (){ 
 	if (acumulado == 0 || suma == true) {
-		cifraFunc();
-		acumulado = acumulado + parseInt(cifra);
+		cifraFuncA();
+		acumulado = acumulado + parseFloat(cifra);
 	}else{
 		if (resta == true) {
-			cifraFunc();
-			acumulado = acumulado - parseInt(cifra);
+			cifraFuncA();
+			acumulado = acumulado - parseFloat(cifra);
 		}else if(divide == true){
-			if (cifra == "") {
-				cifra = 1;
-			}
-			acumulado = acumulado / parseInt(cifra);
+			cifraFuncB();
+			acumulado = acumulado / parseFloat(cifra);
 		}else{
-			if (cifra == "") {
-				cifra = 1;
-			}
-			acumulado = acumulado * parseInt(cifra);
+			cifraFuncB();
+			acumulado = acumulado * parseFloat(cifra);
 		}
 		
 	}
@@ -148,22 +132,18 @@ function multiplicar (){
 
 function dividir (){
 	if (acumulado == 0 || suma == true) {
-		cifraFunc();
-		acumulado = acumulado + parseInt(cifra);
+		cifraFuncA();
+		acumulado = acumulado + parseFloat(cifra);
 	}else{
 		if (resta == true) {
-			cifraFunc();
-			acumulado = acumulado - parseInt(cifra);
+			cifraFuncA();
+			acumulado = acumulado - parseFloat(cifra);
 		}else if(multiplica == true){
-			if (cifra == "") {
-				cifra = 1;
-			}
-			acumulado = acumulado * parseInt(cifra);
+			cifraFuncB();
+			acumulado = acumulado * parseFloat(cifra);
 		}else{
-			if (cifra == "") {
-				cifra = 1;
-			}
-			acumulado = acumulado / parseInt(cifra);
+			cifraFuncB();
+			acumulado = acumulado / parseFloat(cifra);
 		}
 		
 	}
@@ -183,12 +163,25 @@ function delet (){
 	
 }
 
+function point (){
+	cifra = cifra + ".";
+}
+
 /*Esta función esta para cuando no haya cifra, le asigno un 0,
  por ejemplo: 1+1+- (Esto solo lo usare para sumar y restar, ya que para 
  multiplicar y dividir necesito que sea un 1)*/
 
-function cifraFunc () {
+function cifraFuncA () {
 	if (cifra == "") {
 		cifra = 0;
+	}
+}
+
+
+/*Esta es la que usare para multiplicar y dividir */
+
+function cifraFuncB () {
+	if (cifra == "") {
+		cifra = 1;
 	}
 }
