@@ -158,6 +158,7 @@ function dividir (){
 }
 
 function delet (){
+	cifra = "";
 	acumulado = 0;
 	document.getElementById('display').value = acumulado;
 	
